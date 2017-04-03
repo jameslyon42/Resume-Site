@@ -13,8 +13,17 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('resume', require('./components/Resume.vue'));
 
-const app = new Vue({
-    el: '#app'
-});
+window.onload = function () {
+	const app = new Vue({
+	    el: '#app'
+	});
+
+	CodeMirror.tabSize = 8;
+	CodeMirror.indentUnit = 8;
+	CodeMirror.viewportMargin = 'infinity';
+}
+
+
+
