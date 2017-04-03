@@ -10,7 +10,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
-header {
+.pane {
 	background: $color1;
 }
 .pane {
@@ -27,29 +27,11 @@ header {
 .sub-pane:last-child {
 	grid-column: 2 / span 1;
 }
-header .header-info {
-	display: grid;
-	justify-self: center;
+.sub-pane > div {
 	align-self: center;
-	color: $color4;
 }
-.header-info > div {
-	justify-self: center;
-	text-align: center;
-}
-.header-info .head {
-	width: 200px;
-	height: 200px;
-	background: url(images/head.jpg);
-	background-size: cover;
-	border-radius: 50%;
-}
-.header-info .name {
-	font-size: 70px;
-}
-.header-info .description {
-	font-size: 32px;
-}
+
+
 
 /* Based on Sublime Text's Monokai theme */
 
@@ -60,6 +42,13 @@ header .header-info {
 	height: auto;
 	overflow: auto;
 	box-sizing: border-box;
+}
+.CodeMirror-scroll {
+  height: auto !important;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .cm-s-monokai .CodeMirror-code {
 	margin-top: 20px;
@@ -93,7 +82,7 @@ header .header-info {
 .cm-s-monokai span.cm-tag { color: #f92672; }
 .cm-s-monokai span.cm-header { color: #ae81ff; }
 .cm-s-monokai span.cm-link { color: #ae81ff; }
-.cm-s-monokai span.cm-error { background: #f92672; color: #f8f8f0; }
+.cm-s-monokai span.cm-error {  color: #f8f8f0; }
 
 .cm-s-monokai .CodeMirror-activeline-background { background: #373831; }
 .cm-s-monokai .CodeMirror-matchingbracket {

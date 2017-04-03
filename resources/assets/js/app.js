@@ -14,6 +14,8 @@ require('./bootstrap');
  */
 
 Vue.component('resume', require('./components/Resume.vue'));
+Vue.component('pane', require('./components/Pane.vue'));
+Vue.component('preview', require('./components/Preview.vue'));
 
 window.onload = function () {
 	const app = new Vue({
