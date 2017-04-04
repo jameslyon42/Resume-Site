@@ -9,7 +9,7 @@
 	export default {
 		data () {
 			return {
-				sections: ['Header']
+				sections: ['Header', 'Skills', 'Work', 'Contact']
 			};    
 		}
 	}
