@@ -47,6 +47,31 @@ h1 {
 .sub-pane > div {
 	align-self: center;
 }
+footer {
+	background: $color1;
+	widows: 100vh;
+	height: 60vh;
+	display: grid;
+}
+footer .container {
+	justify-self: center;
+	align-self: center;
+}
+footer span,
+footer a {
+	color: white;
+	font-size: 70px;
+}
+footer a {
+	text-decoration: none;
+	border: solid thin white;
+	padding: 5px;
+	cursor: pointer;
+}
+footer a:hover {
+	border: solid 2px white;
+	font-weight: bold;
+}
 
 
 /* Based on Sublime Text's Monokai theme */
