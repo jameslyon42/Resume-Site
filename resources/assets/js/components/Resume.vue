@@ -16,7 +16,12 @@
 	export default {
 		data () {
 			return {
-				sections: ['Header', 'Skills', 'Work', 'Contact']
+				sections: [
+							'Header', 
+							'Skills', 
+							'Work', 
+							'Contact'
+							]
 			};    
 		}
 	}

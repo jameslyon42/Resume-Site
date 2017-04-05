@@ -47,7 +47,7 @@
 					{ name: 'JavaScript', image: 'images/javascript.png' },
 					{ name: 'Laravel', image: 'images/laravel.png' },
 					{ name: 'Vue.js', image: 'images/vue.png' },
-					{ name: 'MySQL', image: 'images/mysql.png' },
+					{ name: 'MySQL', image: 'images/MySQL.png' },
 					{ name: 'CSS', image: 'images/css.png' },
 					{ name: 'HTML', image: 'images/html.png' },
 					{ name: 'Sass', image: 'images/sass.svg' },
