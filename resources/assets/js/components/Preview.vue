@@ -28,8 +28,6 @@
 		},
 		methods: {
 			 renderCode (val) {
-				const lastData = this.keepData && this.codeVM && assign({}, this.codeVM.$data)
-
 				if (this.codeVM) {
 					this.codeVM.$destroy()
 					this.$el.removeChild(this.codeVM.$el)
@@ -40,11 +38,6 @@
 				try {
 					const parent = this
 					this.codeVM = new Vue(val).$mount(this.codeEl)
-					if (lastData) {
-						for (const key in lastData) {
-							this.codeVM[key] = lastData[key]
-						}
-					}
 				} catch (e) {
 					/* istanbul ignore next */
 					this.$emit('error', e)

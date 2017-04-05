@@ -2026,8 +2026,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	},
 	methods: {
 		renderCode: function renderCode(val) {
-			var lastData = this.keepData && this.codeVM && assign({}, this.codeVM.$data);
-
 			if (this.codeVM) {
 				this.codeVM.$destroy();
 				this.$el.removeChild(this.codeVM.$el);
@@ -2038,11 +2036,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			try {
 				var parent = this;
 				this.codeVM = new Vue(val).$mount(this.codeEl);
-				if (lastData) {
-					for (var key in lastData) {
-						this.codeVM[key] = lastData[key];
-					}
-				}
 			} catch (e) {
 				/* istanbul ignore next */
 				this.$emit('error', e);
