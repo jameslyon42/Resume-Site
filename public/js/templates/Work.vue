@@ -1,6 +1,6 @@
 <style>
 	.container { color: #ffffff;text-align: center; }
-	.jobs { max-height: 70vh; overflow: auto; }
+	.jobs { overflow: auto; }
 	.job { text-align: left; box-sizing: border-box; padding: 20px; }
 	h2 { font-size: 30px; border-bottom: solid thin white; margin: 5px 0; }
 	.dates { float: right; font-size: 16px; margin-top: 16px; }
@@ -13,6 +13,9 @@
 		display: inline-block;
 		background-repeat: no-repeat;
 		vertical-align: middle;
+	}
+	@media only screen and (min-width: 768px) {
+		.jobs { max-height: 70vh;}
 	}
 </style>
 
