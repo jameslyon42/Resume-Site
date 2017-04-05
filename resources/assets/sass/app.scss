@@ -20,32 +20,26 @@ h1 {
 }
 .pane {
 	background: $color1;
+	padding: 20px;
+	box-sizing: border-box;
 }
-.pane {
+.pane:first-child {
 	height: 100vh;
 }
 .sub-pane {
 	height: 100%;
-	width: 50%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: absolute;
-	left: 0;
 }
 .sub-pane:last-child {
 	padding-left: 30px;
 	box-sizing: border-box;
-	left: 50%;
+	display: none;
 }
 .pane:nth-child(even) {
 	background: $color5;
-}
-.pane:nth-child(even) .sub-pane {
-	left: 50%;
-}
-.pane:nth-child(even) .sub-pane:last-child {
-	left: 0;
 }
 footer {
 	background: $color1;
@@ -65,10 +59,35 @@ footer a {
 	border: solid thin white;
 	padding: 5px;
 	cursor: pointer;
+	white-space: nowrap;
 }
 footer a:hover {
 	border: solid 2px white;
 	font-weight: bold;
+}
+footer .container {
+	text-align: center;
+}
+@media only screen and (min-width: 768px) {
+	.pane {
+		height: 100vh;
+		padding: 0;
+	}
+	.sub-pane {
+		position: absolute;
+		left: 0;
+		width: 50%;
+	}
+	.sub-pane:last-child {
+		display: block;
+		left: 50%;
+	}
+	.pane:nth-child(even) .sub-pane {
+		left: 50%;
+	}
+	.pane:nth-child(even) .sub-pane:last-child {
+		left: 0;
+	}
 }
 
 
