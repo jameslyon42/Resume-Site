@@ -1,13 +1,12 @@
 <style>
 	.container {
-		display: grid;
-		justify-self: center;
-		align-self: center;
 		color: #ffffff;
+		text-align: center;
 	}
 	.container > div {
-		justify-self: center;
 		text-align: center;
+		display: block;
+		margin: 0 auto;
 	}
 	.head {
 		width: 200px;

@@ -1,7 +1,5 @@
 <style>
 	.container {
-		justify-self: center;
-		align-self: center;
 		color: #ffffff;
 		text-align: center;
 	}

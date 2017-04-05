@@ -5,6 +5,9 @@
 * {
 	font-family: 'Roboto', sans-serif;
 }
+::-webkit-scrollbar { 
+    display: none; 
+}
 html,
 body {
 	margin: 0;
@@ -20,42 +23,37 @@ h1 {
 }
 .pane {
 	height: 100vh;
-	display: grid;
-	grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
 }
 .sub-pane {
-	display: grid;
-	grid-column: 1;
-    grid-row: 1;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
 }
 .sub-pane:last-child {
 	padding-left: 30px;
 	box-sizing: border-box;
-	grid-column: 2 / span 1;
+	left: 50%;
 }
 .pane:nth-child(even) {
 	background: $color5;
 }
 .pane:nth-child(even) .sub-pane {
-	grid-column: 2 / span 1;
+	left: 50%;
 }
 .pane:nth-child(even) .sub-pane:last-child {
-	grid-column: 1;
-    grid-row: 1;
-}
-.sub-pane > div {
-	align-self: center;
+	left: 0;
 }
 footer {
 	background: $color1;
 	widows: 100vh;
 	height: 60vh;
-	display: grid;
-}
-footer .container {
-	justify-self: center;
-	align-self: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 footer span,
 footer a {
@@ -82,11 +80,11 @@ footer a:hover {
 	font-family: monospace !important;
 	box-sizing: border-box;
 	height: 100vh;
+	width: 100%;
 }
-.cm-s-monokai .CodeMirror-scroll {
-	
-}
-.cm-s-monokai .CodeMirror-code {
+.cm-s-monokai .CodeMirror-vscrollbar,
+.cm-s-monokai .CodeMirror-hscrollbar {
+	display: none;
 }
 .cm-s-monokai.CodeMirror * {
 	font-family: monospace !important;

@@ -1,33 +1,10 @@
 <style>
-	.container {
-		justify-self: center;
-		align-self: center;
-		color: #ffffff;
-		text-align: center;
-	}
-	.jobs {
-		max-height: 70vh;
-		overflow: auto;
-	}
-	.job {
-		text-align: left;
-		box-sizing: border-box;
-		padding: 20px;
-	}
-	h2 {
-		font-size: 30px;
-		border-bottom: solid thin white;
-		margin: 5px 0;
-	}
-	.dates {
-		float: right;
-		font-size: 16px;
-		margin-top: 16px;
-	}
-	.duties {
-		font-style: italic;
-		margin-bottom: 5px;
-	}
+	.container { color: #ffffff;text-align: center; }
+	.jobs { max-height: 70vh; overflow: auto; }
+	.job { text-align: left; box-sizing: border-box; padding: 20px; }
+	h2 { font-size: 30px; border-bottom: solid thin white; margin: 5px 0; }
+	.dates { float: right; font-size: 16px; margin-top: 16px; }
+	.duties { font-style: italic; margin-bottom: 5px; }
 	.logo {
 		width: 38px;
 		height: 38px;
@@ -43,11 +20,7 @@
 	<div class='container'>
 		<h1>Work</h1>
 		<div class='jobs'>
-			<div 
-				class='job'
-				v-for='(job, index) in work' 
-				:key='index'
-			>
+			<div class='job' v-for='(job, index) in work'  :key='index' >
 				<h2>
 					<div class='logo' :style="{ backgroundImage: 'url(' + job.logo + ')' }"  ></div>
 					{{job.name}} 
